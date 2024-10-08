@@ -23,25 +23,27 @@ class ViewModel {
     }
 
     init() {
-        // 😭
-//        _ = subject.sink { i in
-//            print("subject1 : \(i)")
-//            // this task is not guaranteed to be executed in order
-//            Task { [weak self] in
-//                guard let self else { return }
-//                await dataManager.handle(i)
-//            }
-//        }
+        /* 😭
+        _ = subject.sink { i in
+            print("subject1 : \(i)")
+            // this task is not guaranteed to be executed in order
+            Task { [weak self] in
+                guard let self else { return }
+                await dataManager.handle(i)
+            }
+        }
+         */
 
-        // 😢
-//        Task {
-//            for await i in subject.values {
-        ////                print("awaited \(i)")
-//                await dataManager.handle(i)
-//            }
-//            let result = await dataManager.data
-//            print("result: \(result)")
-//        }
+        /*😢
+         Task {
+              for await i in subject.values {
+                  print("awaited \(i)")
+                  await dataManager.handle(i)
+              }
+              let result = await dataManager.data
+              print("result: \(result)")
+          }
+           */
 
         // 😊
         Task {
@@ -49,7 +51,6 @@ class ViewModel {
                 await dataManager.handle(i)
             }
         }
-        
     }
 
     func fetch() {
