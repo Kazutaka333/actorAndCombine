@@ -113,6 +113,7 @@ class ViewModel {
     
     // ⚠️ Note that AsyncStream is NOT meant to have multiple consumers ⚠️
     // https://forums.swift.org/t/consuming-an-asyncstream-from-multiple-tasks/54453
+    // This func will print each number only once
     func twoListenerForOneStream() {
         let stream1 = stream
         Task {
