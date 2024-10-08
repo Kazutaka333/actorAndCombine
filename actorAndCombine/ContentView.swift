@@ -5,17 +5,20 @@
 //  Created by Kazutaka Homma on 2024-10-07.
 //
 
+import Combine
 import SwiftUI
 
 struct ContentView: View {
+    let vm = ViewModel()
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
             Text("Hello, world!")
         }
         .padding()
+        .onAppear(perform: {
+            vm.fetch()
+        })
     }
 }
 

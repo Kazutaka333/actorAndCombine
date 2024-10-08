@@ -14,6 +14,7 @@
 		274162EA2CB4D070002F5C44 /* actorAndCombineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274162E92CB4D070002F5C44 /* actorAndCombineTests.swift */; };
 		274162F42CB4D070002F5C44 /* actorAndCombineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274162F32CB4D070002F5C44 /* actorAndCombineUITests.swift */; };
 		274162F62CB4D070002F5C44 /* actorAndCombineUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274162F52CB4D070002F5C44 /* actorAndCombineUITestsLaunchTests.swift */; };
+		274163032CB4D1A1002F5C44 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274163022CB4D1A1002F5C44 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		274162EF2CB4D070002F5C44 /* actorAndCombineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = actorAndCombineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		274162F32CB4D070002F5C44 /* actorAndCombineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = actorAndCombineUITests.swift; sourceTree = "<group>"; };
 		274162F52CB4D070002F5C44 /* actorAndCombineUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = actorAndCombineUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		274163022CB4D1A1002F5C44 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				274162D82CB4D06F002F5C44 /* actorAndCombineApp.swift */,
 				274162DA2CB4D06F002F5C44 /* ContentView.swift */,
+				274163022CB4D1A1002F5C44 /* ViewModel.swift */,
 				274162DC2CB4D070002F5C44 /* Assets.xcassets */,
 				274162DE2CB4D070002F5C44 /* Preview Content */,
 			);
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				274162DB2CB4D06F002F5C44 /* ContentView.swift in Sources */,
+				274163032CB4D1A1002F5C44 /* ViewModel.swift in Sources */,
 				274162D92CB4D06F002F5C44 /* actorAndCombineApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
