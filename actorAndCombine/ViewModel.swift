@@ -42,16 +42,25 @@ class ViewModel {
 //        asyncPublisher()
 
 //        twoForAwait()
-        
-        separateTasks()
+
+//        separateTasks()
 
 //        twoListenerForOneStream()
 
+//        sendingBeforeListeningToStream()
+
+//        Task {
+//            await makeSureListeningStartsBeforeSending()
+//        }
+        
+//        Task {
+//            await makeSureListeningStartsBeforeSending2()
+//        }
     }
 
     func fetch() {
         for i in 0 ... 100 {
-//            print(i)
+//            print("sending", i)
             subject.send(i)
         }
     }
@@ -95,7 +104,7 @@ class ViewModel {
             }
         }
     }
-    
+
     // 🙂
     func separateTasks() {
         Task {
@@ -110,7 +119,7 @@ class ViewModel {
             }
         }
     }
-    
+
     // ⚠️ Note that AsyncStream is NOT meant to have multiple consumers ⚠️
     // https://forums.swift.org/t/consuming-an-asyncstream-from-multiple-tasks/54453
     // This func will print each number only once
@@ -118,14 +127,58 @@ class ViewModel {
         let stream1 = stream
         Task {
             for await i in stream1 {
-                print("1st for-await",i)
+                print("1st for-await", i)
             }
         }
 
         Task {
             for await i in stream1 {
-                print("2nd for-await",i)
+                print("2nd for-await", i)
             }
+        }
+    }
+
+    // 😭
+    // listening to stream doesn't start before subject starts emitting. As a result, no value is received from stream.
+    func sendingBeforeListeningToStream() {
+        Task {
+            for await j in stream {
+                print(j)
+            }
+        }
+//        for _ in 0...100_000 {}
+        for k in 0 ... 10 {
+            subject.send(k)
+        }
+    }
+
+    // ☹️
+    func makeSureListeningStartsBeforeSending() async {
+        await withCheckedContinuation { continuation in
+            Task {
+                continuation.resume()
+                for await j in stream {
+                    print(j)
+                }
+            }
+        }
+
+        for k in 0 ... 10 {
+            subject.send(k)
+        }
+    }
+
+    // 😐
+    func makeSureListeningStartsBeforeSending2() async {
+        Task {
+            for await j in stream {
+                print(j)
+            }
+        }
+        await Task.yield()
+
+        for k in 0 ... 10 {
+            subject.send(k)
         }
     }
 }

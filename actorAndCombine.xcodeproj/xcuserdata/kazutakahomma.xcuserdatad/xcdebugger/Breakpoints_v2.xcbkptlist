@@ -18,6 +18,36 @@
             endingLineNumber = "28"
             landmarkName = "streamMinus"
             landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "EA1E3A4C-7FD9-4FDF-B0A9-6D2BD8C0060E - 65715a6bd59fe241"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "actorAndCombine.ViewModel.streamMinus.getter : Swift.AsyncStream&lt;Swift.Int&gt;"
+                  moduleName = "actorAndCombine"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kazutakahomma/Dev/actorAndCombine/actorAndCombine/ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28">
+               </Location>
+               <Location
+                  uuid = "EA1E3A4C-7FD9-4FDF-B0A9-6D2BD8C0060E - 53a7b54a8668b6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.AsyncStream&lt;Swift.Int&gt;.Continuation) -&gt; () in actorAndCombine.ViewModel.streamMinus.getter : Swift.AsyncStream&lt;Swift.Int&gt;"
+                  moduleName = "actorAndCombine"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kazutakahomma/Dev/actorAndCombine/actorAndCombine/ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
